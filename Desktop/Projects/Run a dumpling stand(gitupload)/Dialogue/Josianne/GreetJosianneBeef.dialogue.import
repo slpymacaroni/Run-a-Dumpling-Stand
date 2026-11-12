@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c5g8srxt8hy3u"
+path="res://.godot/imported/GreetJosianneBeef.dialogue-646bf0a078ef6366a57244289571577e.tres"
+
+[deps]
+
+source_file="res://Dialogue/Josianne/GreetJosianneBeef.dialogue"
+dest_files=["res://.godot/imported/GreetJosianneBeef.dialogue-646bf0a078ef6366a57244289571577e.tres"]
+
+[params]
+
+defaults=true

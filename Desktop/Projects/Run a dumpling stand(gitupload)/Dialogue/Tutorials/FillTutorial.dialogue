@@ -1,0 +1,14 @@
+~ start
+Tutorial: Get filling!
+Tutorial: Is this your first time?
+- Yes
+	Tutorial: Great! Let's get started then! => Tutorial
+- No
+	Tutorial: All right. I won't have to explain then. Good luck! => END
+~ Tutorial
+Tutorial: Select your filling by clicking one of the bowls and time the fill correctly by pressing space! you'll be ranked based on how close to the center the filling is! Got it?
+- Yeah!
+	Great! Let's get started then!
+- No...
+	That's ok! I can repeat myself. => Tutorial 
+=> END

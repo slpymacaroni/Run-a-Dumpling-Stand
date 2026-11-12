@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cf5hcpo0mbpnb"
+path="res://.godot/imported/GreetJosianneChicken.dialogue-07c39ea0daf49495a4e21b5ca7c37cad.tres"
+
+[deps]
+
+source_file="res://Dialogue/Josianne/GreetJosianneChicken.dialogue"
+dest_files=["res://.godot/imported/GreetJosianneChicken.dialogue-07c39ea0daf49495a4e21b5ca7c37cad.tres"]
+
+[params]
+
+defaults=true

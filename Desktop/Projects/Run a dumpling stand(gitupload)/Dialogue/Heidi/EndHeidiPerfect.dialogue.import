@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b22ldrmpwm2qp"
+path="res://.godot/imported/EndHeidiPerfect.dialogue-8eefc29bf9ec5382b5a81dffcefbdb28.tres"
+
+[deps]
+
+source_file="res://Dialogue/Heidi/EndHeidiPerfect.dialogue"
+dest_files=["res://.godot/imported/EndHeidiPerfect.dialogue-8eefc29bf9ec5382b5a81dffcefbdb28.tres"]
+
+[params]
+
+defaults=true

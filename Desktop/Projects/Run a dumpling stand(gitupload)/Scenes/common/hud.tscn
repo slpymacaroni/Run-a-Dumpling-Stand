@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dh2lceyl60uw1"]
+
+[ext_resource type="Texture2D" uid="uid://drcw0pq76i2xe" path="res://Sprites/OrderSpritesheet.png" id="1_fccik"]
+[ext_resource type="Script" path="res://Scenes/order_1.gd" id="2_bjfho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37ofh"]
+atlas = ExtResource("1_fccik")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gp6s"]
+atlas = ExtResource("1_fccik")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da0fo"]
+atlas = ExtResource("1_fccik")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb5wc"]
+atlas = ExtResource("1_fccik")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wswmr"]
+atlas = ExtResource("1_fccik")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fbih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37ofh")
+}],
+"loop": 1,
+"name": &"beef",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gp6s")
+}],
+"loop": 1,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_da0fo")
+}],
+"loop": 1,
+"name": &"mushroom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5wc")
+}],
+"loop": 1,
+"name": &"pork",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wswmr")
+}],
+"loop": 1,
+"name": &"stardust",
+"speed": 5.0
+}]
+
+[node name="HUD" type="Control" unique_id=174663516]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLater" type="CanvasLayer" parent="." unique_id=1228830541]
+
+[node name="Control" type="Control" parent="CanvasLater" unique_id=852328165]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OrderCard1" type="AnimatedSprite2D" parent="CanvasLater/Control" unique_id=1781443776]
+position = Vector2(16, 16)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6fbih")
+animation = &"beef"
+script = ExtResource("2_bjfho")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://s623fax6pj28"
+path="res://.godot/imported/GreetJosianneMushroom.dialogue-f47c8f45bc0689dbb317d28cfc3c6e15.tres"
+
+[deps]
+
+source_file="res://Dialogue/Josianne/GreetJosianneMushroom.dialogue"
+dest_files=["res://.godot/imported/GreetJosianneMushroom.dialogue-f47c8f45bc0689dbb317d28cfc3c6e15.tres"]
+
+[params]
+
+defaults=true

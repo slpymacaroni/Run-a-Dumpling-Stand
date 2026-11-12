@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dic1ufib5fedu"
+path="res://.godot/imported/EndNathanWrongBeef.dialogue-8888706f68c1e3f0e9b2dbe206f99b5c.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/EndNathanWrongBeef.dialogue"
+dest_files=["res://.godot/imported/EndNathanWrongBeef.dialogue-8888706f68c1e3f0e9b2dbe206f99b5c.tres"]
+
+[params]
+
+defaults=true

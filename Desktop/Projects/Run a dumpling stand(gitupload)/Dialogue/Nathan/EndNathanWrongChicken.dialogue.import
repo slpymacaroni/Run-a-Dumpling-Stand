@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dblhgsdjwbduu"
+path="res://.godot/imported/EndNathanWrongChicken.dialogue-cf29bbaf1b3e52f4f19c5b3b408aec76.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/EndNathanWrongChicken.dialogue"
+dest_files=["res://.godot/imported/EndNathanWrongChicken.dialogue-cf29bbaf1b3e52f4f19c5b3b408aec76.tres"]
+
+[params]
+
+defaults=true

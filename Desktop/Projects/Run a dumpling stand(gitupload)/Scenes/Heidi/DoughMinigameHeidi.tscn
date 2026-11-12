@@ -1,0 +1,420 @@
+[gd_scene format=3 uid="uid://dbjftplmgb5i5"]
+
+[ext_resource type="Script" uid="uid://5b7ajl5wbqn8" path="res://Scripts/Heidi/dough_minigameHeidi.gd" id="1_hmg2c"]
+[ext_resource type="Texture2D" uid="uid://d22vr1nypl44j" path="res://Sprites/DoughSpritesheet.png" id="2_efk0a"]
+[ext_resource type="Texture2D" uid="uid://dt1husvw1u0v3" path="res://Sprites/Chopsticks.png" id="3_6befm"]
+[ext_resource type="Script" uid="uid://x1wifio01sxm" path="res://Scripts/common/chopsticks.gd" id="4_4jm03"]
+[ext_resource type="Texture2D" uid="uid://kpr0e88ucrik" path="res://Sprites/KneadMinigameBG.png" id="5_oktth"]
+[ext_resource type="Texture2D" uid="uid://hk03rx5dulmu" path="res://Sprites/WaterParticle.png" id="6_46vef"]
+[ext_resource type="Texture2D" uid="uid://cdxbrhrrxk1ym" path="res://Sprites/ArrowKey.png" id="7_0t04c"]
+[ext_resource type="FontFile" uid="uid://wrenyocxbir5" path="res://fonts/PixelOperator8.ttf" id="8_qeqfb"]
+[ext_resource type="AudioStream" uid="uid://ckqv3xl8tqtr3" path="res://Sounds/dragon-studio-simple-whoosh-02-433006.mp3" id="9_mhhn0"]
+[ext_resource type="AudioStream" uid="uid://cr37mnbsn6ebs" path="res://Sounds/freesound_community-breakbeat-beat-102833.mp3" id="10_1n6xo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8dnn"]
+atlas = ExtResource("2_efk0a")
+region = Rect2(64, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw0cs"]
+atlas = ExtResource("2_efk0a")
+region = Rect2(96, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78def"]
+atlas = ExtResource("2_efk0a")
+region = Rect2(0, 0, 32, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h63tx"]
+atlas = ExtResource("2_efk0a")
+region = Rect2(32, 0, 32, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dj38d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8dnn")
+}],
+"loop": 1,
+"name": &"dough",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw0cs")
+}],
+"loop": 1,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78def")
+}],
+"loop": 1,
+"name": &"flour",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h63tx")
+}],
+"loop": 1,
+"name": &"wetflour",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj38d"]
+size = Vector2(16, 7)
+
+[sub_resource type="CurveTexture" id="CurveTexture_lus04"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ttjqp"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(7, 3, 1)
+angle_min = -377.0
+angle_max = 37.00001
+angular_velocity_min = -247.21
+angular_velocity_max = 135.96999
+radial_velocity_min = 17.159977
+radial_velocity_max = 20.999977
+gravity = Vector3(0, 15, 0)
+alpha_curve = SubResource("CurveTexture_lus04")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggd82"]
+size = Vector2(7.75, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikr2t"]
+size = Vector2(9, 9)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dj38d"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="Animation" id="Animation_h63tx"]
+resource_name = "FlourParticles"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bowl/GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_aw0cs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bowl/GPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../RankLabel:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RankLabel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../RankLabel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lus04"]
+resource_name = "RankAnimation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RankLabel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.2689280275926285, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../RankLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../RankLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_78def"]
+resource_name = "SinkOn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h63tx"]
+_data = {
+&"FlourParticles": SubResource("Animation_h63tx"),
+&"RESET": SubResource("Animation_aw0cs"),
+&"RankAnimation": SubResource("Animation_lus04"),
+&"SinkOn": SubResource("Animation_78def")
+}
+
+[sub_resource type="Animation" id="Animation_wg02o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RankLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RankLabel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.268928]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RankLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_4ef4s"]
+resource_name = "RankAnimation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RankLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RankLabel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.268928, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RankLabel:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jr180"]
+_data = {
+&"RESET": SubResource("Animation_wg02o"),
+&"RankAnimation": SubResource("Animation_4ef4s")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1467157211]
+script = ExtResource("1_hmg2c")
+
+[node name="bowl" type="AnimatedSprite2D" parent="." unique_id=2086361717]
+position = Vector2(-14, 17)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_dj38d")
+animation = &"wetflour"
+
+[node name="MixDetection" type="Area2D" parent="bowl" unique_id=1052279703]
+position = Vector2(0, -0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bowl/MixDetection" unique_id=993215614]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_dj38d")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="bowl" unique_id=384963820]
+position = Vector2(0, 2.5)
+emitting = false
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_ttjqp")
+
+[node name="Chopsticks" type="Sprite2D" parent="." unique_id=916702588]
+position = Vector2(31, -6)
+texture = ExtResource("3_6befm")
+script = ExtResource("4_4jm03")
+
+[node name="Area2D" type="Area2D" parent="Chopsticks" unique_id=998911478]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chopsticks/Area2D" unique_id=1069178665]
+position = Vector2(-4, 13)
+shape = SubResource("RectangleShape2D_ggd82")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=2113608611]
+z_index = -3
+position = Vector2(2.9802322e-08, -1.4901161e-08)
+scale = Vector2(1.0061728, 1.0061729)
+texture = ExtResource("5_oktth")
+
+[node name="SinkActivation" type="Area2D" parent="BG" unique_id=1512662671]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/SinkActivation" unique_id=135164818]
+position = Vector2(-60, 15)
+shape = SubResource("RectangleShape2D_ikr2t")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BG" unique_id=601576220]
+z_as_relative = false
+position = Vector2(-40, -11)
+emitting = false
+amount = 5
+texture = ExtResource("6_46vef")
+lifetime = 0.75
+process_material = SubResource("ParticleProcessMaterial_dj38d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BG" unique_id=756025633]
+libraries/ = SubResource("AnimationLibrary_h63tx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2070481238]
+zoom = Vector2(2, 2)
+
+[node name="NextArrow" type="Sprite2D" parent="." unique_id=161294272]
+position = Vector2(55, 26)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("7_0t04c")
+
+[node name="NextLabel" type="Label" parent="NextArrow" unique_id=1774022457]
+offset_left = -66.66667
+offset_top = 6.666667
+offset_right = 105.33333
+offset_bottom = 60.666668
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("8_qeqfb")
+text = "Next:
+Stretch dough"
+
+[node name="RankLabel" type="Label" parent="." unique_id=1984150583]
+visible = false
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+offset_left = -23.0
+offset_top = -25.0
+offset_right = 17.0
+offset_bottom = -2.0
+rotation = 2.268928
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("8_qeqfb")
+text = "S"
+
+[node name="RankAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1630107927]
+libraries/ = SubResource("AnimationLibrary_jr180")
+
+[node name="MixSound" type="AudioStreamPlayer2D" parent="." unique_id=189991727]
+stream = ExtResource("9_mhhn0")
+
+[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=671964450]
+stream = ExtResource("10_1n6xo")
+autoplay = true
+parameters/looping = true
+
+[connection signal="area_entered" from="bowl/MixDetection" to="." method="_on_mix_detection_area_entered"]

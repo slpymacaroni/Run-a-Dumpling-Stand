@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://xs2eliqq2ug2"
+path="res://.godot/imported/GreetNathanPork.dialogue-3d429bc0ffc13fabc7fe05edd975ce38.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/GreetNathanPork.dialogue"
+dest_files=["res://.godot/imported/GreetNathanPork.dialogue-3d429bc0ffc13fabc7fe05edd975ce38.tres"]
+
+[params]
+
+defaults=true

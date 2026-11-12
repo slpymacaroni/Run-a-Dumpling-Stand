@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b83ehltws5vtp"
+path="res://.godot/imported/EndNathanPerfect.dialogue-998bf95f09682cf04fa0503d0ee0a9e4.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/EndNathanPerfect.dialogue"
+dest_files=["res://.godot/imported/EndNathanPerfect.dialogue-998bf95f09682cf04fa0503d0ee0a9e4.tres"]
+
+[params]
+
+defaults=true

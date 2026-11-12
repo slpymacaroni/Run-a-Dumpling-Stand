@@ -1,0 +1,297 @@
+[gd_scene format=3 uid="uid://dr7js3fqgk5r6"]
+
+[ext_resource type="Texture2D" uid="uid://d0yjcxxp2cp6o" path="res://Sprites/CounterOverlay.png" id="1_pf303"]
+[ext_resource type="Texture2D" uid="uid://dj0wd1m2v7pgy" path="res://Sprites/KitchenOverlay.png" id="2_8djao"]
+[ext_resource type="Texture2D" uid="uid://cmhn7mpejor8s" path="res://Sprites/ShopOverlay.png" id="3_tssdh"]
+[ext_resource type="Script" uid="uid://ctcapk3ggni7k" path="res://Scripts/Nathan/overlayNathan.gd" id="4_8utop"]
+[ext_resource type="Texture2D" uid="uid://bwt21gokj8v6l" path="res://Sprites/Customer-1Spritesheet.png" id="5_77pyt"]
+[ext_resource type="Script" uid="uid://gnjd7t5e4dh" path="res://Scripts/Nathan/customer_spritesNathan.gd" id="6_ixhtq"]
+[ext_resource type="Script" uid="uid://b1emmnya7mhuk" path="res://Scripts/common/camera_2d.gd" id="7_p7ur4"]
+[ext_resource type="Texture2D" uid="uid://xc5abatvvbf7" path="res://Sprites/DoughMinigameIcon.png" id="8_vdbn7"]
+[ext_resource type="FontFile" uid="uid://wrenyocxbir5" path="res://fonts/PixelOperator8.ttf" id="9_xknia"]
+[ext_resource type="Texture2D" uid="uid://drcw0pq76i2xe" path="res://Sprites/OrderSpritesheet.png" id="10_lhqam"]
+[ext_resource type="Script" uid="uid://mr2ejof8c8co" path="res://Scripts/Nathan/order_1Nathan.gd" id="11_xomi0"]
+[ext_resource type="Texture2D" uid="uid://brmul5tl5mnl0" path="res://Sprites/ArrowGreenSpritesheet.png" id="12_d14t4"]
+[ext_resource type="Texture2D" uid="uid://ddrcgd1q4a2sp" path="res://Sprites/BG.png" id="13_p4vv1"]
+[ext_resource type="AudioStream" uid="uid://dybwvxwv8xyan" path="res://Sounds/musiqo-flute-rain-flute-loop-ambient-short-loop-340800.mp3" id="14_8djao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljgfx"]
+atlas = ExtResource("3_tssdh")
+region = Rect2(0, 0, 288, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dj38d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pf303")
+}],
+"loop": 1,
+"name": &"Counter",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8djao")
+}],
+"loop": 1,
+"name": &"Kitchen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljgfx")
+}],
+"loop": 1,
+"name": &"Shop",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lxpt"]
+atlas = ExtResource("5_77pyt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au80b"]
+atlas = ExtResource("5_77pyt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dbgj"]
+atlas = ExtResource("5_77pyt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lxpt")
+}],
+"loop": 1,
+"name": &"Confused-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au80b")
+}],
+"loop": 1,
+"name": &"Happy-1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dbgj")
+}],
+"loop": 0,
+"name": &"Idle-1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilx7y"]
+size = Vector2(34, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37ofh"]
+atlas = ExtResource("10_lhqam")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gp6s"]
+atlas = ExtResource("10_lhqam")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da0fo"]
+atlas = ExtResource("10_lhqam")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb5wc"]
+atlas = ExtResource("10_lhqam")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wswmr"]
+atlas = ExtResource("10_lhqam")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikr2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37ofh")
+}],
+"loop": 1,
+"name": &"beef",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gp6s")
+}],
+"loop": 1,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_da0fo")
+}],
+"loop": 1,
+"name": &"mushroom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb5wc")
+}],
+"loop": 1,
+"name": &"pork",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wswmr")
+}],
+"loop": 1,
+"name": &"stardust",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmm80"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmn1r"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opday"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gi8a"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujxq8"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehr7v"]
+atlas = ExtResource("12_d14t4")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggd82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmm80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmn1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opday")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gi8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujxq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehr7v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_dj38d"]
+default_font = ExtResource("9_xknia")
+
+[node name="Node2d" type="Node2D" unique_id=1265908664]
+
+[node name="Overlay" type="AnimatedSprite2D" parent="." unique_id=556232111]
+z_index = 1
+texture_filter = 1
+position = Vector2(144, 81)
+sprite_frames = SubResource("SpriteFrames_dj38d")
+animation = &"Counter"
+script = ExtResource("4_8utop")
+
+[node name="CustomerSprites" type="AnimatedSprite2D" parent="." unique_id=1228886106]
+texture_filter = 1
+position = Vector2(-31.000046, 100)
+scale = Vector2(5.7500005, 5.7500005)
+sprite_frames = SubResource("SpriteFrames_ilx7y")
+animation = &"Idle-1"
+script = ExtResource("6_ixhtq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=795110240]
+position = Vector2(144, 81)
+zoom = Vector2(1.1, 1.1)
+script = ExtResource("7_p7ur4")
+
+[node name="MinigamesButtons" type="Node2D" parent="." unique_id=1528673715]
+z_index = 3
+position = Vector2(144, 81)
+
+[node name="Sprite2D" type="Sprite2D" parent="MinigamesButtons" unique_id=77703927]
+texture = ExtResource("8_vdbn7")
+
+[node name="Label" type="Label" parent="MinigamesButtons" unique_id=358692474]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+offset_left = -31.0
+offset_top = -25.0
+offset_right = 35.0
+offset_bottom = -2.0
+theme_override_fonts/font = ExtResource("9_xknia")
+text = "COOK!"
+
+[node name="Area2D" type="Area2D" parent="MinigamesButtons" unique_id=1221935734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MinigamesButtons/Area2D" unique_id=1289989357]
+shape = SubResource("RectangleShape2D_ilx7y")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1241430365]
+
+[node name="Control" type="Control" parent="HUD" unique_id=653021399]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 288.0
+offset_bottom = 162.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OrderCard1" type="AnimatedSprite2D" parent="HUD/Control" unique_id=1107586018]
+visible = false
+position = Vector2(16, 16)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ikr2t")
+animation = &"beef"
+script = ExtResource("11_xomi0")
+
+[node name="ArrowRight" type="AnimatedSprite2D" parent="HUD" unique_id=1627912163]
+z_index = 1
+position = Vector2(271, 149)
+sprite_frames = SubResource("SpriteFrames_ggd82")
+autoplay = "default"
+frame_progress = 0.45489264
+
+[node name="LabelKitchen" type="Label" parent="HUD/ArrowRight" unique_id=1588693123]
+offset_left = -55.0
+offset_top = -4.0
+offset_right = 37.0
+offset_bottom = 19.0
+scale = Vector2(0.5, 0.5)
+theme = SubResource("Theme_dj38d")
+text = "Kitchen"
+metadata/_edit_use_anchors_ = true
+
+[node name="BG" type="Sprite2D" parent="." unique_id=586458932]
+z_index = -3
+position = Vector2(144, 68)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_p4vv1")
+
+[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=126700830]
+stream = ExtResource("14_8djao")
+autoplay = true
+parameters/looping = true
+
+[connection signal="mouse_entered" from="MinigamesButtons/Area2D" to="MinigamesButtons" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="MinigamesButtons/Area2D" to="MinigamesButtons" method="_on_area_2d_mouse_exited"]

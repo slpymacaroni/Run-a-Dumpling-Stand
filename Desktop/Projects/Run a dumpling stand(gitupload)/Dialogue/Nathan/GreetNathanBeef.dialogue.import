@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dswmlun0h1vj5"
+path="res://.godot/imported/GreetNathanBeef.dialogue-b505ba6ba54e5f6c003774cdbf0ed45c.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/GreetNathanBeef.dialogue"
+dest_files=["res://.godot/imported/GreetNathanBeef.dialogue-b505ba6ba54e5f6c003774cdbf0ed45c.tres"]
+
+[params]
+
+defaults=true

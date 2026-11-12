@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://jtll7sxwm1vk"
+path="res://.godot/imported/KneadTutorial.dialogue-d95e7a4a9044b314436a782a05b60762.tres"
+
+[deps]
+
+source_file="res://Dialogue/Tutorials/KneadTutorial.dialogue"
+dest_files=["res://.godot/imported/KneadTutorial.dialogue-d95e7a4a9044b314436a782a05b60762.tres"]
+
+[params]
+
+defaults=true

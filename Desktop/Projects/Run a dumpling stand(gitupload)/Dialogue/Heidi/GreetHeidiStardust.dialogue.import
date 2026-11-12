@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bg80cdcdo54nc"
+path="res://.godot/imported/GreetHeidiStardust.dialogue-3b1114638b4364b59017dafead23c4d0.tres"
+
+[deps]
+
+source_file="res://Dialogue/Heidi/GreetHeidiStardust.dialogue"
+dest_files=["res://.godot/imported/GreetHeidiStardust.dialogue-3b1114638b4364b59017dafead23c4d0.tres"]
+
+[params]
+
+defaults=true

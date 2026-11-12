@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cjg8xrpb2lbhq"]
+
+[ext_resource type="Script" uid="uid://bddqv243ay5d7" path="res://Scripts/inventory.gd" id="1_wdn4f"]
+[ext_resource type="Texture2D" uid="uid://ch4q8l7ffaca3" path="res://Sprites/InventoryOverlay.png" id="2_k5gp2"]
+[ext_resource type="FontFile" uid="uid://wrenyocxbir5" path="res://fonts/PixelOperator8.ttf" id="3_yxepq"]
+
+[sub_resource type="Theme" id="Theme_dj38d"]
+default_font = ExtResource("3_yxepq")
+
+[node name="Inventory" type="Node2D" unique_id=436712389]
+script = ExtResource("1_wdn4f")
+
+[node name="Overlay" type="Sprite2D" parent="." unique_id=778894010]
+position = Vector2(144, 7)
+texture = ExtResource("2_k5gp2")
+
+[node name="DoughAmountLabel" type="Label" parent="Overlay" unique_id=1001173252]
+offset_left = -116.0
+offset_top = -1.0
+offset_right = -102.0
+offset_bottom = 15.0
+scale = Vector2(0.5, 0.5)
+theme = SubResource("Theme_dj38d")
+text = "1"

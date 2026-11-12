@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bgmsx1inyoop5"
+path="res://.godot/imported/StretchTutorial.dialogue-b2b0f8d33b972b4c0fedc0bf2521b00e.tres"
+
+[deps]
+
+source_file="res://Dialogue/Tutorials/StretchTutorial.dialogue"
+dest_files=["res://.godot/imported/StretchTutorial.dialogue-b2b0f8d33b972b4c0fedc0bf2521b00e.tres"]
+
+[params]
+
+defaults=true

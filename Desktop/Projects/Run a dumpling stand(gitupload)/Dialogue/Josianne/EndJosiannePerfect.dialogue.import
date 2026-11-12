@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://c0bviawvq15vf"
+path="res://.godot/imported/EndJosiannePerfect.dialogue-abe584cd1c384a200e6b7b0c82453c1c.tres"
+
+[deps]
+
+source_file="res://Dialogue/Josianne/EndJosiannePerfect.dialogue"
+dest_files=["res://.godot/imported/EndJosiannePerfect.dialogue-abe584cd1c384a200e6b7b0c82453c1c.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cqt5d2dam4sjw"]
+
+[ext_resource type="Script" uid="uid://dd3gt2srh11tm" path="res://Scripts/Josianne/cook_cutsceneJosianne.gd" id="1_3mdpc"]
+[ext_resource type="Texture2D" uid="uid://ca0utthl22203" path="res://Sprites/CookingCutsceneSpritesheet.png" id="2_j4b6v"]
+[ext_resource type="AudioStream" uid="uid://cpl755lysmnn0" path="res://Sounds/voicebosch-sizzling-frying-pan-201293.mp3" id="3_obi65"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7blg"]
+atlas = ExtResource("2_j4b6v")
+region = Rect2(0, 0, 154, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adqij"]
+atlas = ExtResource("2_j4b6v")
+region = Rect2(0, 81, 154, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvedk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7blg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adqij")
+}],
+"loop": 1,
+"name": &"cook",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1467157211]
+script = ExtResource("1_3mdpc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2070481238]
+zoom = Vector2(2, 2)
+
+[node name="BG" type="AnimatedSprite2D" parent="." unique_id=1345047762]
+z_index = -3
+position = Vector2(1.7763568e-15, -8.881784e-16)
+scale = Vector2(1.0061728, 1.0061729)
+sprite_frames = SubResource("SpriteFrames_mvedk")
+animation = &"cook"
+frame_progress = 0.117997155
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=694961901]
+stream = ExtResource("3_obi65")
+volume_db = 9.94
+autoplay = true

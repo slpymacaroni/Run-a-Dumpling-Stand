@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cpdb0dplk4psu"
+path="res://.godot/imported/GreetNathanChicken.dialogue-74d5ad435a7e118ce7039ebcd4ed0b35.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/GreetNathanChicken.dialogue"
+dest_files=["res://.godot/imported/GreetNathanChicken.dialogue-74d5ad435a7e118ce7039ebcd4ed0b35.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cht04j2ym1hyr"
+path="res://.godot/imported/GreetJosiannePork.dialogue-1bff95264edde8ea33c3a72f7502a75d.tres"
+
+[deps]
+
+source_file="res://Dialogue/Josianne/GreetJosiannePork.dialogue"
+dest_files=["res://.godot/imported/GreetJosiannePork.dialogue-1bff95264edde8ea33c3a72f7502a75d.tres"]
+
+[params]
+
+defaults=true

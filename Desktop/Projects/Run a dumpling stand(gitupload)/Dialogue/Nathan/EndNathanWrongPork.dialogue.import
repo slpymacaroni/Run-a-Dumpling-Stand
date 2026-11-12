@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://d018ot6ggp6jv"
+path="res://.godot/imported/EndNathanWrongPork.dialogue-46ae6d72c74b95b147e98445b8c37832.tres"
+
+[deps]
+
+source_file="res://Dialogue/Nathan/EndNathanWrongPork.dialogue"
+dest_files=["res://.godot/imported/EndNathanWrongPork.dialogue-46ae6d72c74b95b147e98445b8c37832.tres"]
+
+[params]
+
+defaults=true
