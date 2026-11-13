@@ -2,6 +2,7 @@
 
 ### I'm really not sure what to put in here, this is my first time... Apparently I was supposed to write this on day 1 of making the project, but its been now more than a week (The project was created on nov. 2nd, at the time of writing this it is the 10th of november.)
 ### My time will probably be deflated :( I already put 20 hours in this but it probably won't count because i didn't properly read the instructions...
+### This means that you won't find commits about me working on the actual game...
 ### This project was originally made for the Crescent YSWS but I decided to move it to Phantom instead, (hence the appearance of Heidi in the game).
 
 This is a game made in **GDscript** runnable on a browser via this link: https://sleepymacaroni.itch.io/run-a-dumpling-stand
